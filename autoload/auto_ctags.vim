@@ -26,8 +26,8 @@ if !exists("g:auto_ctags_directory_list")
   let g:auto_ctags_directory_list = ['.']
 endif
 
-if !exists("g:auto_ctags_tags_name")
-  let g:auto_ctags_tags_name = 'tags'
+if !exists("g:auto_ctags_tags_name_fixed")
+  let g:auto_ctags_tags_name_fixed = 'tags'
 endif
 
 if !exists("g:auto_ctags_bin_path")
@@ -65,7 +65,7 @@ function! auto_ctags#ctags_path()
       endif
     endif
     if isdirectory(directory)
-      let tags_name = g:auto_ctags_tags_name
+      let tags_name = g:auto_ctags_tags_name_fixed
       "if g:auto_ctags_filetype_mode > 0
       "  if &filetype !=# ''
       "    let tags_name = &filetype.'.'.tags_name
