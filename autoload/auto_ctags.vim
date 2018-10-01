@@ -66,11 +66,11 @@ function! auto_ctags#ctags_path()
     endif
     if isdirectory(directory)
       let tags_name = g:auto_ctags_tags_name
-      if g:auto_ctags_filetype_mode > 0
-        if &filetype !=# ''
-          let tags_name = &filetype.'.'.tags_name
-        endif
-      endif
+      "if g:auto_ctags_filetype_mode > 0
+      "  if &filetype !=# ''
+      "    let tags_name = &filetype.'.'.tags_name
+      "  endif
+      "endif
       let path = directory.s:Path.separator().tags_name
       break
     endif
